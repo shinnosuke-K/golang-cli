@@ -44,11 +44,12 @@ func readFromFile(filePath string) []string {
 }
 
 func main() {
-	lines := readFromFile("text")
+	//lines := readFromFile("text")
 	rand.Seed(time.Now().UTC().UnixNano())
 	s := bufio.NewScanner(os.Stdin)
 	for s.Scan() {
-		t := lines[rand.Intn(len(lines))]
+		t := transforms[rand.Intn(len(transforms))]
+		//t := lines[rand.Intn(len(lines))]
 		fmt.Println(strings.Replace(t, otherWord, s.Text(), -1))
 	}
 }
