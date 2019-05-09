@@ -28,7 +28,7 @@ func main() {
 			}
 			newText = append(newText, r)
 		}
-		//fmt.Println(string(newText) + "." + tlds[rand.Intn(len(tlds))])
-		fmt.Println(string(newText) + "." + os.Args[1])
+		fmt.Println(string(newText) + "." + tlds[rand.Intn(len(tlds))])
+		//fmt.Println(string(newText) + "." + os.Args[1])
 	}
 }

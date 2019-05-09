@@ -19,7 +19,7 @@ func main() {
 			log.Fatalf("%qの類義語検索に失敗しました: %v\n", word, err)
 		}
 		if len(syns) == 0 {
-			log.Fatalf("%qに類語はありませんでした\n")
+			log.Fatalf("%qに類語はありませんでした\n", word)
 		}
 		for _, syn := range syns {
 			fmt.Println(syn)
